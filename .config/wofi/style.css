@@ -1,0 +1,43 @@
+* {
+border-radius: 8px;
+}
+
+window {
+margin: 5px;
+border: 1px solid #7aa2f7;
+border-radius: 8px;
+}
+
+#input {
+margin: 5px;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#inner-box {
+margin: 5px;
+}
+
+#outer-box {
+margin: 5px;
+}
+
+#scroll {
+margin: 5px;
+}
+
+#text {
+margin: 5px;
+} 
+
+#entry:selected {
+background-color: rgba(122, 162, 247, .2)
+}
+
+image {
+  margin: 3px;
+}
+
+

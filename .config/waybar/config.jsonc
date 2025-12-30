@@ -1,0 +1,87 @@
+// -*- mode: jsonc -*-
+{
+  "height": 45,
+  "spacing": 4,
+  "margin": "5px 10px 0 10px",
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "clock",
+    "custom/power",
+  ],
+  "custom/launcher": {
+    "on-click": "wofi --show drun",
+    "format": "",
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "󰈹",
+      "3": "",
+      "4": "󰭹",
+      "5": "",
+    },
+    "persistent-workspaces": {
+      "*": 5,
+    },
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "cursor": "pointer",
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "Mozilla Firefox",
+      "(.*) - Visual Studio Code": "Visual Studio Code",
+      "roy@archlinux:(.*)": "Kitty",
+    },
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphone": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "default": ["", ""],
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+  "network": {
+    "format-ethernet": "{icon} {bandwidthTotalBytes}",
+    "format-wifi": "{icon} {bandwidthTotalBytes}",
+    "on-click": "zsh ~/.config/waybar/scripts/network.sh",
+    "format-disconnected": "󰣼 internet",
+    "format-icons": {
+      "ethernet": ["󰛳"],
+      "wifi": ["󰖩"],
+    },
+  },
+  "cpu": {
+    "format": " {usage}%",
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {percentage}%",
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M - %d/%m/%y}",
+  },
+  "custom/power": {
+    "format": "",
+    "cursor": "pointer",
+  },
+}
