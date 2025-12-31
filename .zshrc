@@ -13,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export DVM_DIR="/home/roy/.dvm"
 export PATH="$DVM_DIR/bin:$PATH"
+export TERM=xterm-kitty
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -116,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 alias icat="kitten icat"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias surf="windsurf"
+alias sddm-test="sddm-greeter --test-mode --theme"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
