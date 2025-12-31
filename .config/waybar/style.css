@@ -11,7 +11,8 @@
 
 * {
   font-family: "RobotoMono Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 #waybar {
@@ -19,13 +20,15 @@
 }
 
 #waybar > box {
-  border-radius: 10px;
-  margin: 4px 0px 4px 0px;
+  /* border-radius: 10px; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0px 0px 0px 0px;
   transition-property: background-color;
   transition-duration: 0.5s;
   padding: 6px 10px;
-  background-color: @background;
-  border: 2px solid shade(alpha(@border, 0.4), 1);
+  background-color: shade(alpha(@background, 0.6), 1);
+  border-bottom: 2px solid shade(alpha(@border, 0.4), 1);
 }
 
 window#waybar.hidden {
@@ -34,18 +37,20 @@ window#waybar.hidden {
 
 label {
   background-color: transparent;
+  margin-top: 6px;
   padding: 0px 7px;
   border-radius: 10px;
 }
 
 #custom-launcher {
   font-size: 25px;
-  padding-left: 7px;
+  padding-left: 10px;
   background-color: transparent;
   color: @blue;
 }
 
 #workspaces {
+  margin-top: 6px;
   border-radius: 10px;
   padding: 0 7px;
   transition: all 0.2s ease-in-out;
@@ -55,7 +60,7 @@ label {
 #workspaces label {
   background-color: transparent;
   font-weight: bolder;
-  margin: 0;
+  margin: 0px;
   padding: 2px 7px;
   transition: all 0.3s ease-in-out;
 }
