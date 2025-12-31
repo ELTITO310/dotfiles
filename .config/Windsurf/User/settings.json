@@ -1,0 +1,28 @@
+{
+  // Theme & Appearance
+  "workbench.colorTheme": "Shibuya",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": true,
+
+  // Editor Settings
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 20,
+  "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "auto",
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Terminal Settings
+  "terminal.integrated.fontFamily": "MesloLGL Nerd Font Mono",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.3
+}
